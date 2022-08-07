@@ -1,0 +1,247 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;;
+    text-decoration: none;
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Nanum Myeongjo', serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*NAVIGATION*/
+nav{
+    background-color: #4E148C;
+    color: white;
+    padding: 1em;
+    top: 0;
+    width: 100%;
+    position: fixed;
+}
+.nav__inner{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 1.8rem;
+}
+.nav__toggle{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.nav__toggle-rotate{
+    transform: rotate(450deg);
+    transition: 0.3s linear;
+}
+.links{
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s linear;
+}
+.show__links{
+    height: 10rem;
+}
+.links a{
+    color: white;
+    display: block;
+    margin: 1em;
+}
+.links a:hover{
+    color: wheat;
+}
+
+/*BANNER*/
+.banner{
+    margin-top: 3.7em;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(./images/pexels-mike-b-383556.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 70vh;
+}
+.banner__info{
+    padding: 1.5em 1em;
+}
+.banner__txt{
+    color: white;
+}
+.banner__txt h2{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.banner__txt p{
+    margin: 2em 0em;
+    line-height: 1.3;
+}
+.banner__btn{
+    text-align: center;
+}
+.banner__btn button{
+    border-style: none;
+    padding: 0.8em;
+    font-weight: 500;
+    color: #4E148C;
+    cursor: pointer;
+}
+.banner__btn button:hover{
+    background-color: #4E148C;
+    transition: 0.3s linear;
+    color: white;
+}
+/*MINI INFO*/
+.mini__info{
+    margin: 0em 1em;
+}
+.mini__info h2{
+    text-align: center;
+    margin: 2em 0em;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4E148C;
+}
+.mini__info-icons{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 3rem;
+}
+.html{
+    color: rgb(35, 35, 226);
+}
+.css{
+    color: orangered;
+}
+.javascript{
+    color: rgba(236, 236, 6, 0.822);
+}
+.react{
+    color: rgb(0, 183, 255);
+}
+/*PROJECTS*/
+.projects{
+    height: 50vh;
+}
+.projects h2{
+    text-align: center;
+    margin: 2em 0em 1.5em;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4E148C;
+}
+.projects h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: rgba(8, 8, 8, 0.767);
+}
+/*ABOUT*/
+.about{
+    margin: 0em 1em 3em;
+}
+.about h2{
+    text-align: center;
+    color: #4E148C;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0em 0em 2em;
+}
+.about p{
+    margin-top: 1em;
+}
+
+
+
+
+/*MEDIA QUERY*/
+@media(min-width:768px){
+    .nav__toggle{
+        display: none;
+    }
+    .links{
+        height: auto;
+        text-align: left;
+        display: flex;
+    }
+    .links a{
+        margin: 0.5em;
+    }
+    .nav__center{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0em 1em;
+    }
+    .logo{
+        font-size: 2.3rem;
+    }
+    .banner{
+        margin-top: 4.2em;
+    }
+    .banner__info{
+        padding-top: 2.5em;
+    }
+    .banner__txt{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+    .banner__txt h2{
+        font-size: 2rem;
+    }
+    .banner__txt p{
+        line-height: 1.5;
+        width: 80%;
+        float: right;
+    }
+    .banner__btn button{
+        font-size: 1rem;
+    }
+    .mini__info h2{
+        font-size: 2.6rem;
+    }
+    .mini__info-icons{
+        font-size: 4.5rem;
+    }
+    .projects h2{
+        font-size: 2.6rem;
+    }
+    .about__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    .about img{
+        width: 50%;
+    }
+    .about p{
+        width: 40%;
+    }
+}
+
+@media(min-width:900px){
+    .logo{
+        font-size: 2rem;
+    }
+    .links{
+        font-size: 1rem;
+    }
+    .banner__txt h2{
+        font-size: 2.6rem;
+    }
+    .banner__txt p{
+        font-size: 1rem;
+    }
+    .banner__info{
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    .nav__center{
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+}
